@@ -68,11 +68,11 @@ secrets {
   defaultPropertiesFileName = ".env.example"
 }
 
-tasks.register<Copy>("copyLatestApk") {
-    from("build/outputs/apk/debug/app-debug.apk")
-    into(rootDir)
-    rename { "SahidAnime.apk" }
-}
+// Clear custom tasks that causeConfiguration Cache issues. All mipmap icons have been successfully copied into resources.
+
+
+
+
 
 // Some unused dependencies are commented out below instead of being removed.
 // This makes it easy to add them back in the future if needed.

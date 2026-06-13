@@ -287,6 +287,16 @@ fun MainAppContent(
                 displayZoomControls = false
                 cacheMode = WebSettings.LOAD_DEFAULT
             }
+            setDownloadListener { url, _, _, _, _ ->
+                try {
+                    val intent = Intent(Intent.ACTION_VIEW, android.net.Uri.parse(url)).apply {
+                        flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                    }
+                    context.startActivity(intent)
+                } catch (e: Exception) {
+                    // Fallback
+                }
+            }
         }
     }
 
