@@ -1,0 +1,6 @@
+{
+  "name": "Sahid Anime",
+  "description": "Securely explore and stream your favorite anime content through the Sahid Anime Web App, featuring built-in web-to-app acceleration, offline detection, and custom styling.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
